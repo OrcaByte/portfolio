@@ -1,0 +1,15 @@
+$avatarSize: 110px;
+
+
+.avatar-container {
+  border-radius: 100%;
+  overflow: hidden;
+  height: $avatarSize;
+  width: $avatarSize;
+  border: 1px solid lightslategray;
+  object-fit: cover;
+  img {
+    max-height: 155%;
+    left: -11px;
+  }
+}
