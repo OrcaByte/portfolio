@@ -1,4 +1,6 @@
+import React from 'react';
 import ProfileImg from '../Images/sumit.jpeg';
+import AboutMe from './AboutMe';
 import ContactMe from './ContactMe';
 
 export default function SideBarInfo() {
@@ -10,12 +12,10 @@ export default function SideBarInfo() {
 
       <div className="mt-1">
         <h2 className="font-medium text-3xl">Sumit Kumar</h2>
-        <p className="text-base italic text-gray-400">Software Engineer</p>
+        <p className="text-base italic underline text-center text-green-600">Software Engineer</p>
       </div>
 
-      <div className="">
-          dfdjfdjfjfdfdfdfdfd
-      </div>
+      <AboutMe />
 
       <ContactMe />
     </aside>
