@@ -17,7 +17,7 @@ export default function Tabs() {
     },
   ];
   return (
-    <div className="py-2 mx-2 border-t border-b border-yellow-300 flex justify-around ">
+    <div className="py-2 mx-2 border-t border-b bg-gray-100 border-yellow-600 flex justify-around ">
       {TABS.map((tabInfo) => (
         <Link
           className="nav-tab inline-block hover:bg-gray-100 font-medium text-green-600 text-center"

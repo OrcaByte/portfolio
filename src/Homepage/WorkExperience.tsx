@@ -3,7 +3,7 @@ import './stepper.scss';
 
 export default function WorkExperience() {
   return (
-    <div className="p-3 overflow-hidden overflow-y-auto stepper-container shadow-sm ml-3 mr-2 rounded-md mt-3 bg-white">
+    <div className="home-card scrollbar stepper-container ">
       <div className="timeline p-4">
         <h2 className="timeline__item timeline__item--year">1985</h2>
 
