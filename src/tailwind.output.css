@@ -31119,7 +31119,8 @@ video {
   padding: 0.75rem;
   --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  max-height: 87vh;
+  height: 87vh;
+  background-image: linear-gradient(to bottom, #064e3b,#065f46);
   &::-webkit-scrollbar {
     width: 15px;
   }

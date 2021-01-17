@@ -11,9 +11,6 @@ export default function Homepage() {
     >
       <SideBarInfo />
       <HomeContainer />
-
-
-
     </div>
   );
 }
