@@ -5,7 +5,7 @@ export default function Tabs() {
   const TABS = [
     {
       name: 'Work Experience',
-      path: 'work-exp',
+      path: '',
     },
     {
       name: 'Skills and Languages',
@@ -13,17 +13,19 @@ export default function Tabs() {
     },
     {
       name: 'Projects',
-      path: 'project',
+      path: 'projects',
     },
   ];
   return (
-    <div className="py-2 mx-2 border-t border-b border-yellow-300 grid grid-cols-10">
+    <div className="py-2 mx-2 border-t border-b border-yellow-300 flex justify-around ">
       {TABS.map((tabInfo) => (
         <Link
-          className="col-span-2 font-medium text-green-600 text-center"
+          className="nav-tab inline-block hover:bg-gray-100 font-medium text-green-600 text-center"
           to={tabInfo.path}
         >
-          {tabInfo.name}
+          <span className="relative -top-1 px-2 inline-block">
+            {tabInfo.name}
+          </span>
         </Link>
       ))}
     </div>

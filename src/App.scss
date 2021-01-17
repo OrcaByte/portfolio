@@ -1,1 +1,23 @@
 @import './tailwind.output.css';
+
+.nav-tab {
+  @mixin sudoprops {
+    content: '';
+    width: 2px;
+    height: 110%;
+    display: inline-block;
+    background-color: mediumseagreen;
+    transform: rotate(30deg);
+    position: relative;
+  }
+
+  &::after {
+    @include sudoprops;
+    margin-left: 12px;
+  }
+
+  &::before {
+    @include sudoprops;
+    margin-right: 12px;
+  }
+}
