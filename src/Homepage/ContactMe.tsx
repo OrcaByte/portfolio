@@ -1,8 +1,7 @@
-import CallIcon from '../Images/call.png';
-import GitIcon from '../Images/github.png';
-import LinkedInIcon from '../Images/linkedin.png';
+import React from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { IoIosCall } from 'react-icons/io';
 import MailIcon from '../Images/mail.png';
-import WhatsappIcon from '../Images/whatsapp.png';
 
 export default function ContactMe() {
   const IMAGE_SIZE = 30;
@@ -11,14 +10,9 @@ export default function ContactMe() {
       <h2 className="font-medium mb-2 text-xl">Contact Me :</h2>
       <div className="grid grid-cols-1 gap-2">
         <div className="col-span-1 flex items-center">
-          <img
-            className="mr-2"
-            height={IMAGE_SIZE}
-            width={IMAGE_SIZE}
-            src={GitIcon}
-          />
+          <FaGithub className="w-8 h-8 mr-3 " />
           <a
-            className="text-sm font-medium"
+            className="text-sm text-green-900 font-medium"
             target="_blank"
             href="https://github.com/dhruvanwd"
           >
@@ -27,14 +21,9 @@ export default function ContactMe() {
         </div>
 
         <div className="col-span-1 flex items-center">
-          <img
-            className="mr-2"
-            height={IMAGE_SIZE}
-            width={IMAGE_SIZE}
-            src={LinkedInIcon}
-          />
+          <FaLinkedin className="w-8 h-8 mr-3 text-purple-600" />
           <a
-            className="text-sm font-medium"
+            className="text-sm text-green-900 font-medium"
             href="https://www.linkedin.com/in/72sumit-kumar/"
           >
             in/72sumit-kumar
@@ -43,13 +32,13 @@ export default function ContactMe() {
 
         <div className="col-span-1 flex items-center">
           <img
-            className="mr-2"
+            className="mr-3"
             height={IMAGE_SIZE}
             width={IMAGE_SIZE}
             src={MailIcon}
           />
           <a
-            className="text-sm font-medium"
+            className="text-sm text-green-900 font-medium"
             target="_blank"
             href="mailto:dev.kumar.sumit@gmail.com"
           >
@@ -58,13 +47,8 @@ export default function ContactMe() {
         </div>
 
         <div className="col-span-1 flex items-center">
-          <img
-            className="mr-2"
-            height={IMAGE_SIZE}
-            width={IMAGE_SIZE}
-            src={CallIcon}
-          />
-          <a className="text-sm font-medium" href="tel:7007962803">
+          <IoIosCall className="w-8 h-8 mr-3 " />
+          <a className="text-sm text-green-900 font-medium" href="tel:7007962803">
             +91 7007962803
           </a>
         </div>

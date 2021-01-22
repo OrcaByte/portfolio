@@ -11,7 +11,7 @@ export default function SideBarInfo() {
       </div>
 
       <div className="mt-1">
-        <h2 className="font-medium text-3xl">Sumit Kumar</h2>
+        <h2 className="font-medium text-purple-500 text-3xl">Sumit Kumar</h2>
         <p className="text-base italic underline text-center text-green-600">Software Engineer</p>
       </div>
 

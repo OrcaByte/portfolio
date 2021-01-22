@@ -31120,7 +31120,11 @@ video {
   --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   height: 87vh;
-  background-image: linear-gradient(to bottom, #064e3b,#065f46);
+  background-image: linear-gradient(
+    to bottom,
+    #4b5563,
+    #1f2937
+  );
   &::-webkit-scrollbar {
     width: 15px;
   }
@@ -31132,7 +31136,7 @@ video {
   /* scrollbar Handle */
   &::-webkit-scrollbar-thumb {
     --tw-bg-opacity: 1;
-    background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+    background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
     border-radius: 10px;
   }
   /* scrollbar Handle on hover */
@@ -31140,6 +31144,18 @@ video {
     --tw-bg-opacity: 1;
     background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
   }
+}
+
+.circular-avatar {
+  border-radius: 9999px;
+  display: grid;
+  place-items: center;
+  height: 3rem;
+  margin-left: 0.25rem;
+  overflow: hidden;
+  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  width: 3rem;
 }
 
 @media (min-width: 640px) {

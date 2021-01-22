@@ -23,7 +23,7 @@ export default function Tabs() {
           className="nav-tab inline-block hover:bg-gray-100 font-medium text-green-600 text-center"
           to={tabInfo.path}
         >
-          <span className="relative -top-1 px-2 inline-block">
+          <span className="relative -top-2 px-2 inline-block">
             {tabInfo.name}
           </span>
         </Link>
