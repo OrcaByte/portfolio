@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoIosCall } from 'react-icons/io';
+import { GlobalContext } from '../globalContext';
 import MailIcon from '../Images/mail.png';
 
 export default function ContactMe() {
+  const { contactDetails } = useContext<any>(GlobalContext);
+
   const IMAGE_SIZE = 30;
   return (
     <div className="pt-8 w-full">
@@ -13,10 +16,11 @@ export default function ContactMe() {
           <FaGithub className="w-8 h-8 mr-3 " />
           <a
             className="text-sm text-green-900 font-medium"
+            rel="noreferrer"
             target="_blank"
-            href="https://github.com/dhruvanwd"
+            href={contactDetails.github.url}
           >
-            /dhruvanwd
+            {contactDetails.github.display}
           </a>
         </div>
 
@@ -24,9 +28,9 @@ export default function ContactMe() {
           <FaLinkedin className="w-7 h-7 mr-3 text-purple-600" />
           <a
             className="text-sm text-green-900 font-medium"
-            href="https://www.linkedin.com/in/72sumit-kumar/"
+            href={contactDetails.linkedIn.url}
           >
-            in/72sumit-kumar
+            {contactDetails.linkedIn.display}
           </a>
         </div>
 
@@ -36,20 +40,25 @@ export default function ContactMe() {
             height={IMAGE_SIZE}
             width={IMAGE_SIZE}
             src={MailIcon}
+            alt="mail_icon"
           />
           <a
             className="text-sm text-green-900 font-medium"
+            rel="noreferrer"
             target="_blank"
-            href="mailto:dev.kumar.sumit@gmail.com"
+            href={contactDetails.mail.url}
           >
-            dev.kumar.sumit@gmail.com
+            {contactDetails.mail.display}
           </a>
         </div>
 
         <div className="col-span-1 flex items-center">
           <IoIosCall className="w-8 h-8 mr-3 " />
-          <a className="text-sm text-green-900 font-medium" href="tel:7007962803">
-            +91 7007962803
+          <a
+            className="text-sm text-green-900 font-medium"
+            href={contactDetails.mobile.url}
+          >
+            {contactDetails.mobile.display}
           </a>
         </div>
       </div>

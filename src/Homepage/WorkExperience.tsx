@@ -1,97 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GlobalContext } from '../globalContext';
 import './stepper.scss';
 
 export default function WorkExperience() {
+  const { timeline } = useContext<any>(GlobalContext);
+
   return (
     <div className="home-card scrollbar stepper-container ">
       <div className="timeline p-4">
-        <h2 className="timeline__item timeline__item--year">1985</h2>
+        {timeline.map((event: any) => (
+          <>
+            {event.year && (
+              <h2 className="timeline__item timeline__item--year">
+                {event.year}
+              </h2>
+            )}
 
-        <div className="timeline__item">
-          <h3 className="timeline__title">Born</h3>
-        </div>
-
-        <h2 className="timeline__item timeline__item--year">2003</h2>
-
-        <div className="timeline__item">
-          <h3 className="timeline__title">Graduated High School</h3>
-        </div>
-
-        <h2 className="timeline__item timeline__item--year">2004</h2>
-
-        <div className="timeline__item">
-          <h3 className="timeline__title">
-            Started at Fox Valley Technical College (FVTC) in an Electrical
-            Engineering program
-          </h3>
-        </div>
-
-        <h2 className="timeline__item timeline__item--year">2006</h2>
-
-        <div className="timeline__item">
-          <h3 className="timeline__title">
-            Changed at FVTC to Web Design & Development program
-          </h3>
-        </div>
-
-        <h2 className="timeline__item timeline__item--year">2007</h2>
-
-        <div className="timeline__item">
-          <h3 className="timeline__title">Web Design Internship</h3>
-          <p className="timeline__blurb">started internship at company 1.</p>
-        </div>
-
-        <h2 className="timeline__item timeline__item--year">2008</h2>
-
-        <div className="timeline__item">
-          <h3 className="timeline__title">IT Internship</h3>
-          <p className="timeline__blurb">Started internship at company 2</p>
-        </div>
-
-        <div className="timeline__item">
-          <h3 className="timeline__title">Got Married</h3>
-        </div>
-
-        <div className="timeline__item">
-          <h3 className="timeline__title">Application Engineer</h3>
-          <p className="timeline__blurb">
-            Started web design/dev job at company 2.
-          </p>
-        </div>
-
-        <h2 className="timeline__item timeline__item--year">2012</h2>
-
-        <div className="timeline__item">
-          <h3 className="timeline__title">First Child</h3>
-          <p className="timeline__blurb">
-            Spouse and I welcomed our first daughter.
-          </p>
-        </div>
-
-        <h2 className="timeline__item timeline__item--year">2015</h2>
-
-        <div className="timeline__item">
-          <h3 className="timeline__title">Second Child</h3>
-          <p className="timeline__blurb">
-            Spouse and I welcomed our second daughter.
-          </p>
-        </div>
-
-        <h2 className="timeline__item timeline__item--year">2016</h2>
-
-        <div className="timeline__item">
-          <h3 className="timeline__title">Lead Application Engineer</h3>
-          <p className="timeline__blurb">Promotion to mid-level role.</p>
-        </div>
-
-        <h2 className="timeline__item timeline__item--year">2018</h2>
-
-        <div className="timeline__item">
-          <h3 className="timeline__title">Aerial/Circus Arts</h3>
-          <p className="timeline__blurb">
-            Started taking classes to learn aerial silks, hoop, and hammock.
-          </p>
-        </div>
+            {(event.title || event.blurp) && (
+              <div className="timeline__item">
+                {event.title && (
+                  <h3 className="timeline__title">{event.title}</h3>
+                )}
+                {event.blurp && (
+                  <p className="timeline__blurb">{event.blurp}</p>
+                )}
+              </div>
+            )}
+          </>
+        ))}
       </div>
     </div>
   );

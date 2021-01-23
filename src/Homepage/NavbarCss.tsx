@@ -26,10 +26,9 @@ export default function NavbarCss() {
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex space-x-4">
               {TABS.map((t) => (
-                <>
+                <React.Fragment key={t.name}>
                   <Link
                     to={t.path}
-                    key={t.name}
                     className={`${
                       location.pathname === t.path
                         ? 'bg-green-800 hover:bg-gray-900'
@@ -38,7 +37,7 @@ export default function NavbarCss() {
                   >
                     {t.name}
                   </Link>
-                </>
+                </React.Fragment>
               ))}
             </div>
           </div>
