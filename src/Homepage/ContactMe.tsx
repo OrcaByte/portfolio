@@ -21,7 +21,7 @@ export default function ContactMe() {
         </div>
 
         <div className="col-span-1 flex items-center">
-          <FaLinkedin className="w-8 h-8 mr-3 text-purple-600" />
+          <FaLinkedin className="w-7 h-7 mr-3 text-purple-600" />
           <a
             className="text-sm text-green-900 font-medium"
             href="https://www.linkedin.com/in/72sumit-kumar/"

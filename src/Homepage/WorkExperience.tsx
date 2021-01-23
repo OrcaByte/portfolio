@@ -92,8 +92,6 @@ export default function WorkExperience() {
             Started taking classes to learn aerial silks, hoop, and hammock.
           </p>
         </div>
-
-        <h2 className="timeline__item timeline__item--year">2019</h2>
       </div>
     </div>
   );

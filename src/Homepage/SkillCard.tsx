@@ -7,7 +7,7 @@ export default function SkillCard(props: { percentage: number , label:string, ch
         {props.children}
       </div>
       <div className="py-1 px-2 w-10/12">
-        <p className="text-lg text-blue-600 font-medium">{props.label}</p>
+        <p className="text-lg text-gray-800 font-medium">{props.label}</p>
         <div className="flex justify-between items-center">
           <div className="h-3 w-full overflow-hidden rounded-full bg-pink-200">
             <div
