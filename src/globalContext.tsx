@@ -12,12 +12,14 @@ import {
   FaReact,
 } from 'react-icons/fa';
 import { SiDart, SiFlutter, SiTailwindcss, SiTypescript } from 'react-icons/si';
+import ProfileImg from './Images/sumit.jpeg';
 
 export const GlobalContext = React.createContext({});
 
 export const projectDetail = {
   profile: {
     name: 'Sumit Kumar',
+    avatarUrl: ProfileImg,
     jobTitle: 'Software Engineer',
     aboutMe:
       'I was born in 1976. I live in Bavaria and work in Munich as a Software Developer/Architect. I’ve published more than 20 articles for German programming magazines, mostly about Ruby .',

@@ -7,23 +7,23 @@ export default function WorkExperience() {
 
   return (
     <div className="home-card scrollbar stepper-container ">
-      <div className="timeline p-4">
+      <div className="timeline relative p-4">
         {timeline.map((event: any) => (
           <>
             {event.year && (
-              <h2 className="timeline__item timeline__item--year">
+              <h2 className="timeline__item timeline__item--year py-2 bg-gray-800 text-3xl grid place-items-center">
                 {event.year}
               </h2>
             )}
 
             {(event.title || event.blurp) && (
-              <div className="timeline__item">
+              <div className="timeline__item p-3 my-5">
                 {event.title && (
-                  <h3 className="timeline__title">{event.title}</h3>
+                  <h3 className="timeline__title m-0 text-2xl">
+                    {event.title}
+                  </h3>
                 )}
-                {event.blurp && (
-                  <p className="timeline__blurb">{event.blurp}</p>
-                )}
+                {event.blurp && <p className="mt-2 text-base">{event.blurp}</p>}
               </div>
             )}
           </>

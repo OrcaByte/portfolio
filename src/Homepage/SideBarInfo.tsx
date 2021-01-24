@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../globalContext';
-import ProfileImg from '../Images/sumit.jpeg';
 import ContactMe from './ContactMe';
 
 export default function SideBarInfo() {
@@ -9,7 +8,11 @@ export default function SideBarInfo() {
   return (
     <aside className="col-span-3 p-3 shadow-md rounded-sm pt-4 bg-yellow-300 flex h-full flex-col justify-between items-center">
       <div className="avatar-container relative">
-        <img className="transform hover:scale-110" src={ProfileImg} alt="avatar" />
+        <img
+          className="transform hover:scale-110"
+          src={profile.avatarUrl}
+          alt="avatar"
+        />
       </div>
 
       <div className="mt-1">

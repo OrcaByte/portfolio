@@ -3,8 +3,6 @@ $lineColor: hotpink;
 $fontColor: #bbb;
 $bgColor1: #222;
 $bgColor2: #444;
-$yearBgColor: #333;
-
 $breakpoint: 700px;
 
 .stepper-container {
@@ -12,15 +10,8 @@ $breakpoint: 700px;
   font-family: 'Playfair Display', serif;
 }
 
-h1 {
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
-}
-
 .timeline {
-  position: relative;
   margin: 0 auto;
-
   &:before {
     content: '';
     position: absolute;
@@ -46,12 +37,10 @@ h1 {
 }
 
 .timeline__item {
-  padding: 1rem;
   border: 2px solid $lineColor;
   border-image: linear-gradient(to right, $color 0%, $lineColor 100%);
   border-image-slice: 1;
   position: relative;
-  margin: 1rem 3rem 1rem 1rem;
   clear: both;
 
   &:after,
@@ -71,11 +60,8 @@ h1 {
 
   @media screen and (min-width: $breakpoint) {
     width: 44%;
-    margin: 1rem;
-
     &:nth-of-type(2n) {
       float: right;
-      margin: 1rem;
       border-image: linear-gradient(to right, $lineColor 0%, $color 100%);
       border-image-slice: 1;
 
@@ -89,21 +75,13 @@ h1 {
 }
 
 .timeline__item--year {
-  text-align: center;
   max-width: 150px;
-  margin: 0 48px 0 auto;
-  font-size: 1.8rem;
-  background-color: $yearBgColor;
-  line-height: 1;
   border-image: none;
-  padding: 0.5rem 1rem 1rem;
-
   &:before {
     display: none;
   }
 
   @media screen and (min-width: $breakpoint) {
-    text-align: center;
     margin: 0 auto;
 
     &:nth-of-type(2n) {
@@ -119,13 +97,5 @@ h1 {
 }
 
 .timeline__title {
-  margin: 0;
   font-family: 'Raleway', sans-serif;
-  font-size: 1.5em;
-}
-
-.timeline__blurb {
-  line-height: 1.5;
-  font-size: 1rem;
-  margin: 0.5rem 0 0;
 }

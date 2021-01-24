@@ -1,18 +1,5 @@
 import React, { useContext } from 'react';
 import SkillCard from './SkillCard';
-import {
-  FaCss3Alt,
-  FaHtml5,
-  FaJs,
-  FaReact,
-  FaAngular,
-  FaNodeJs,
-  FaGithub,
-  FaBootstrap,
-  FaPython,
-  FaAws,
-} from 'react-icons/fa';
-import { SiDart, SiFlutter, SiTailwindcss, SiTypescript } from 'react-icons/si';
 import { GlobalContext } from '../globalContext';
 
 export default function SkillsLanguages() {
