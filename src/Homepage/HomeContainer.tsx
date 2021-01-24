@@ -12,7 +12,6 @@ export default function HomeContainer() {
       <Router>
         <NavbarCss />
         <Switch>
-          <Route component={WorkExperience} exact path="/" />
           <Route component={SkillsLanguages} exact path="/skills" />
           <Route component={ProjectsPage} exact={true} path="/projects" />
           <Route
@@ -24,6 +23,8 @@ export default function HomeContainer() {
             )}
             path="/contacts"
           />
+          <Route component={WorkExperience} path="/" />
+
         </Switch>
       </Router>
     </div>
