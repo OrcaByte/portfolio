@@ -8,8 +8,8 @@ export default function WorkExperience() {
   return (
     <div className="home-card scrollbar stepper-container ">
       <div className="timeline relative p-4">
-        {timeline.map((event: any) => (
-          <>
+        {timeline.map((event: any, index: number) => (
+          <React.Fragment key={index}>
             {event.year && (
               <h2 className="timeline__item timeline__item--year py-2 bg-gray-800 text-3xl grid place-items-center">
                 {event.year}
@@ -26,7 +26,7 @@ export default function WorkExperience() {
                 {event.blurp && <p className="mt-2 text-base">{event.blurp}</p>}
               </div>
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>

@@ -29,6 +29,8 @@ export default function ContactMe() {
           <a
             className="text-sm text-green-900 font-medium"
             href={contactDetails.linkedIn.url}
+            rel="noreferrer"
+            target="_blank"
           >
             {contactDetails.linkedIn.display}
           </a>
