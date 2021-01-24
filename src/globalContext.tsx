@@ -21,8 +21,10 @@ export const projectDetail = {
     name: 'Sumit Kumar',
     avatarUrl: ProfileImg,
     jobTitle: 'Software Engineer',
-    aboutMe:
-      'I was born in 1976. I live in Bavaria and work in Munich as a Software Developer/Architect. I’ve published more than 20 articles for German programming magazines, mostly about Ruby .',
+    aboutMe: `I software developer. 
+    stumbled upon javascript in 2017 and fell in love with it then & there,
+      Till date I am exploring, learing and playing with Js and its ecosystem. I have also clear understanding 
+      of Product architecture, life-cycle and UI-UX. `,
   },
   contactDetails: {
     github: {
@@ -38,8 +40,8 @@ export const projectDetail = {
       url: 'mailto:dev.kumar.sumit@gmail.com',
     },
     mobile: {
-      display: ' +91 7007962803',
-      url: 'tel:7007962803',
+      display: ' +91 7799276791',
+      url: 'tel:7799276791',
     },
   },
 

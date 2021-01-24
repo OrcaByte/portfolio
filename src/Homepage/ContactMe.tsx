@@ -9,7 +9,7 @@ export default function ContactMe() {
 
   const IMAGE_SIZE = 30;
   return (
-    <div className="pt-8 w-full">
+    <div className="pt-6 w-full">
       <h2 className="font-medium mb-2 text-xl">Contact Me :</h2>
       <div className="grid grid-cols-1 gap-2">
         <div className="col-span-1 flex items-center">

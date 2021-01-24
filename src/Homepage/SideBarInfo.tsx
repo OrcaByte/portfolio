@@ -6,7 +6,7 @@ export default function SideBarInfo() {
   const { profile } = useContext<any>(GlobalContext);
 
   return (
-    <aside className="col-span-3 p-3 shadow-md rounded-sm pt-4 bg-yellow-300 flex h-full flex-col justify-between items-center">
+    <aside className="col-span-3 p-4 shadow-md rounded-sm bg-yellow-300 flex h-full flex-col justify-between items-center">
       <div className="avatar-container relative">
         <img
           className="transform hover:scale-110"
@@ -22,7 +22,7 @@ export default function SideBarInfo() {
         </p>
       </div>
 
-      <p className="text-center tracking-tight font-medium my-4">
+      <p className="text-center tracking-tight font-medium mt-4">
         {profile.aboutMe}
       </p>
 
