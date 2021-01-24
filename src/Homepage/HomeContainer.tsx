@@ -23,8 +23,7 @@ export default function HomeContainer() {
             )}
             path="/contacts"
           />
-          <Route component={WorkExperience} path="/" />
-
+          <Route component={WorkExperience} path="**" />
         </Switch>
       </Router>
     </div>
