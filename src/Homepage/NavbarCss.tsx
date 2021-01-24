@@ -10,7 +10,7 @@ export default function NavbarCss() {
       path: '/',
     },
     {
-      name: 'Skills & Languages',
+      name: 'Skills',
       path: '/skills',
     },
     {
@@ -19,8 +19,8 @@ export default function NavbarCss() {
     },
     {
       name: 'Contact Me',
-      path: '/contact-me',
-      class: 'block md:hidden',
+      path: '/contacts',
+      classes: 'block md:hidden',
     },
   ];
   return (
@@ -38,7 +38,7 @@ export default function NavbarCss() {
                         ? 'bg-green-800 hover:bg-gray-900'
                         : ' hover:bg-gray-700'
                     } ${
-                      t.class
+                      t.classes
                     } text-gray-300 hover:text-white px-2 md:px-3 py-1 rounded-md text-sm font-medium`}
                   >
                     {t.name}

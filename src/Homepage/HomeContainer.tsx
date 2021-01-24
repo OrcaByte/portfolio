@@ -12,23 +12,18 @@ export default function HomeContainer() {
       <Router>
         <NavbarCss />
         <Switch>
-          <Route exact path="/">
-            <WorkExperience />
-          </Route>
-
-          <Route exact path="/skills">
-            <SkillsLanguages />
-          </Route>
-
-          <Route exact to="/projects">
-            <ProjectsPage />
-          </Route>
-
-          <Route to="/contact-me">
-            <div className="home-card scrollbar">
-              <ContactMe />
-            </div>
-          </Route>
+          <Route component={WorkExperience} exact path="/" />
+          <Route component={SkillsLanguages} exact path="/skills" />
+          <Route component={ProjectsPage} exact={true} path="/projects" />
+          <Route
+            exact={true}
+            component={() => (
+              <div className="home-card scrollbar">
+                <ContactMe />
+              </div>
+            )}
+            path="/contacts"
+          />
         </Switch>
       </Router>
     </div>

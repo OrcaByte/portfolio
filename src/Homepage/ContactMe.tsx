@@ -10,12 +10,14 @@ export default function ContactMe() {
   const IMAGE_SIZE = 30;
   return (
     <div className="pt-6 w-full">
-      <h2 className="font-medium mb-2 text-xl">Contact Me :</h2>
+      <h2 className="font-medium mb-2 text-xl text-center md:text-black md:text-left text-white">
+        Contact Me :
+      </h2>
       <div className="grid grid-cols-1 gap-2">
         <div className="col-span-1 flex items-center">
           <FaGithub className="w-8 h-8 mr-3 " />
           <a
-            className="text-sm text-green-900 font-medium"
+            className="text-sm text-white md:text-green-900 font-medium"
             rel="noreferrer"
             target="_blank"
             href={contactDetails.github.url}
@@ -27,7 +29,7 @@ export default function ContactMe() {
         <div className="col-span-1 flex items-center">
           <FaLinkedin className="w-7 h-7 mr-3 text-purple-600" />
           <a
-            className="text-sm text-green-900 font-medium"
+            className="text-sm text-white md:text-green-900 font-medium"
             href={contactDetails.linkedIn.url}
             rel="noreferrer"
             target="_blank"
@@ -45,7 +47,7 @@ export default function ContactMe() {
             alt="mail_icon"
           />
           <a
-            className="text-sm text-green-900 font-medium"
+            className="text-sm text-white md:text-green-900 font-medium"
             rel="noreferrer"
             target="_blank"
             href={contactDetails.mail.url}
@@ -55,9 +57,9 @@ export default function ContactMe() {
         </div>
 
         <div className="col-span-1 flex items-center">
-          <IoIosCall className="w-8 h-8 mr-3 " />
+          <IoIosCall className="w-8 text-white md:text-green-900 h-8 mr-3 " />
           <a
-            className="text-sm text-green-900 font-medium"
+            className="text-sm text-white md:text-green-900 font-medium"
             href={contactDetails.mobile.url}
           >
             {contactDetails.mobile.display}

@@ -25,8 +25,9 @@ export default function SideBarInfo() {
       <p className="text-center tracking-tight font-medium mt-4">
         {profile.aboutMe}
       </p>
-
-      <ContactMe />
+      <div className="hidden md:block w-full">
+        <ContactMe />
+      </div>
     </aside>
   );
 }
