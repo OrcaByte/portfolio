@@ -12,6 +12,7 @@ This project was bootstrapped is hosted here [Portofio](https://dhruvanwd.github
 - 🌱 Enchance Resposiveness
 - 🌱 Add new Features
 - 🌱 Enrich projects card.
+- 🌱 Theming (light + dark) mode
 
 <br />
 <br />
