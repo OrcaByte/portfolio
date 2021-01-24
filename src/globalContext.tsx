@@ -47,66 +47,58 @@ export const projectDetail = {
 
   timeline: [
     {
-      year: 1985,
+      year: 1995,
       title: 'Born',
     },
     {
-      year: 2003,
-      title: 'Graduated High School',
+      year: 2017,
+      title: 'Graduated B.tch(CSE)',
     },
     {
-      year: 2004,
-      title: `Started at Fox Valley Technical College (FVTC) in an Electrical
-      Engineering program`,
+      year: 2018,
+      title: `Joined a startup (Edisonedge pvt. ltd)`,
+      blurp: `Developed a online quiz based gaming app.`,
     },
 
     {
-      year: 2005,
       title: `Changed at FVTC to Web Design & Development program`,
     },
 
     {
-      year: 2006,
+      year: 2019,
       title: `Web Design Internship`,
       blurp: `started internship at company 1.`,
     },
 
     {
-      year: 2007,
       title: `IT Internship`,
       blurp: `Started internship at company 2`,
     },
-
     {
-      title: 'Got Married',
-    },
-    {
+      year: 2020,
       title: `Application Engineer`,
       blurp: ` Started web design/dev job at company 2.`,
     },
 
     {
-      year: 2012,
-      title: `First Child`,
-      blurp: `Spouse and I welcomed our first daughter.`,
+      year: 2021,
+      title: `Product Engineer`,
+      blurp: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit`,
     },
 
     {
-      year: 2015,
-      title: `Second Child`,
-      blurp: ` Spouse and I welcomed our second daughter.`,
+      title: `Team Lead`,
+      blurp: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit`,
     },
 
     {
-      year: 2016,
       title: `Lead Application Engineer`,
-      blurp: `Promotion to mid-level role.`,
+      blurp: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit`,
     },
 
     {
-      year: 2018,
       title: `Aerial/Circus Arts`,
-      blurp: `Started taking classes to learn aerial silks, hoop, and hammock.`,
+      blurp: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
     },
   ],
 
