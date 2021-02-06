@@ -5,7 +5,7 @@ import { GlobalContext } from '../globalContext';
 import MailIcon from '../Images/mail.png';
 
 export default function ContactMe() {
-  const { contactDetails } = useContext<any>(GlobalContext);
+  const { contactDetails } = useContext(GlobalContext);
 
   const IMAGE_SIZE = 30;
   return (
