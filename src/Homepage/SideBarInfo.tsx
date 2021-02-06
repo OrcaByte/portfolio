@@ -3,7 +3,7 @@ import { GlobalContext } from '../globalContext';
 import ContactMe from './ContactMe';
 
 export default function SideBarInfo() {
-  const { profile } = useContext<any>(GlobalContext);
+  const { profile } = useContext(GlobalContext);
 
   return (
     <aside className="md:col-span-3 col-span-12 p-4 shadow-md rounded-sm bg-yellow-300 flex h-full flex-col justify-between items-center">

@@ -14,7 +14,6 @@ import {
 import { SiDart, SiFlutter, SiTailwindcss, SiTypescript } from 'react-icons/si';
 import ProfileImg from './Images/sumit.jpeg';
 
-export const GlobalContext = React.createContext({});
 
 export const projectDetail = {
   profile: {
@@ -228,7 +227,25 @@ export const projectDetail = {
       ],
     },
   ],
-
+  TABS : [
+    {
+      name: 'Timeline',
+      path: '/',
+    },
+    {
+      name: 'Skills',
+      path: '/skills',
+    },
+    {
+      name: 'Projects',
+      path: '/projects',
+    },
+    {
+      name: 'Contact Me',
+      path: '/contacts',
+      classes: 'block md:hidden',
+    },
+  ],
   pdfOptions: {
     parentRef: React.createRef<any>(),
     options: {
@@ -237,3 +254,4 @@ export const projectDetail = {
     },
   },
 };
+export const GlobalContext = React.createContext(projectDetail);

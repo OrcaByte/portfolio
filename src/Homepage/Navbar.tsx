@@ -7,27 +7,8 @@ import ReactToPdf from 'react-to-pdf';
 
 export default function NavbarCss() {
   const location = useLocation();
-  const { pdfOptions, profile } = useContext<any>(GlobalContext);
+  const { pdfOptions, profile, TABS } = useContext(GlobalContext);
 
-  const TABS = [
-    {
-      name: 'Timeline',
-      path: '/',
-    },
-    {
-      name: 'Skills',
-      path: '/skills',
-    },
-    {
-      name: 'Projects',
-      path: '/projects',
-    },
-    {
-      name: 'Contact Me',
-      path: '/contacts',
-      classes: 'block md:hidden',
-    },
-  ];
   return (
     <nav className="bg-gray-800 mt-4 md:mt-0 md:ml-3">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">

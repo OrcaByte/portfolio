@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { GlobalContext } from '../globalContext';
 
 export default function ProjectsPage() {
-  const { projects } = useContext<any>(GlobalContext);
+  const { projects } = useContext(GlobalContext);
   return (
     <div className="home-card scrollbar">
       <div className="p-2 grid justify-between grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 md:gap-x-4">
