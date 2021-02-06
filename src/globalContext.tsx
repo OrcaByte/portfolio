@@ -229,4 +229,6 @@ export const projectDetail = {
       ],
     },
   ],
+
+  parentRef : React.createRef<any>()
 };

@@ -7,7 +7,10 @@ import SideBarInfo from './Homepage/SideBarInfo';
 function App() {
   return (
     <GlobalContext.Provider value={projectDetail}>
-      <div className="xs:p-0 sm:p-2 md:p-4 w-full">
+      <div
+        ref={projectDetail.parentRef}
+        className="xs:p-0 sm:p-2 md:p-4 w-full"
+      >
         <div
           style={{ height: '94vh' }}
           className="w-full grid grid-cols-12 z-10 relative"

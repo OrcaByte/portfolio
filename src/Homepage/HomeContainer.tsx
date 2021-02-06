@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import WorkExperience from './WorkExperience';
 import SkillsLanguages from './SkillsLanguages';
 import ProjectsPage from './ProjectsPage';
-import NavbarCss from './NavbarCss';
+import NavbarCss from './Navbar';
 import ContactMe from './ContactMe';
 
 export default function HomeContainer() {
