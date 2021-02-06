@@ -3,11 +3,11 @@ import { Link, useLocation } from 'react-router-dom';
 import { GlobalContext } from '../globalContext';
 import { FaRegFilePdf } from 'react-icons/fa';
 // @ts-ignore
-import Pdf from 'react-to-pdf';
+import ReactToPdf from 'react-to-pdf';
 
 export default function NavbarCss() {
   const location = useLocation();
-  const { parentRef, profile } = useContext<any>(GlobalContext);
+  const { pdfOptions, profile } = useContext<any>(GlobalContext);
 
   const TABS = [
     {
@@ -53,16 +53,20 @@ export default function NavbarCss() {
             </div>
           </div>
           <div className="absolute hidden inset-y-0 right-0 md:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <Pdf targetRef={parentRef} filename={`${profile.name}.pdf`}>
+            <ReactToPdf
+              targetRef={pdfOptions.parentRef}
+              filename={`${profile.name}.pdf`}
+              options={pdfOptions.options}
+            >
               {({ toPdf }: any) => (
                 <button
-                  className="bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-blue-600 py-2 px-4 border border-blue hover:border-transparent rounded text-green-300"
+                  className="bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-blue-400 py-2 px-4 border border-blue hover:border-transparent rounded text-yellow-400"
                   onClick={toPdf}
                 >
                   <FaRegFilePdf />
                 </button>
               )}
-            </Pdf>
+            </ReactToPdf>
           </div>
         </div>
       </div>

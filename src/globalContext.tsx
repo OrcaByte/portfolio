@@ -21,10 +21,9 @@ export const projectDetail = {
     name: 'Sumit Kumar',
     avatarUrl: ProfileImg,
     jobTitle: 'Software Engineer',
-    aboutMe: `I software developer. 
-    stumbled upon javascript in 2017 and fell in love with it then & there,
-      Till date I am exploring, learing and playing with Js and its ecosystem. I have also clear understanding 
-      of Product architecture, life-cycle and UI-UX. `,
+    aboutMe: `I stumbled upon javascript in 2017 and fell in love with it then & there,
+      Till date I am exploring, learning and playing with Js and its ecosystem. I also have clear understanding 
+      of project architecture, life-cycle & UI-UX. `,
   },
   contactDetails: {
     github: {
@@ -109,7 +108,7 @@ export const projectDetail = {
       description: ` Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Voluptatibus quia, nulla! Maiores et perferendis eaque,
             exercitationem praesentium nihil.`,
-      tags: ['#photography', '#travel', '#winter'],
+      tags: ['#space-booking', '#Events', '#Gifts'],
     },
 
     {
@@ -118,7 +117,7 @@ export const projectDetail = {
       description: ` Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Voluptatibus quia, nulla! Maiores et perferendis eaque,
             exercitationem praesentium nihil.`,
-      tags: ['#photography', '#travel', '#winter'],
+      tags: ['#patient-management', '#Appointment', '#Timeline'],
     },
     {
       name: 'H20 Job portal',
@@ -230,5 +229,11 @@ export const projectDetail = {
     },
   ],
 
-  parentRef : React.createRef<any>()
+  pdfOptions: {
+    parentRef: React.createRef<any>(),
+    options: {
+      orientation: 'landscape',
+      format: 'legal',
+    },
+  },
 };

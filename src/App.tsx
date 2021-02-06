@@ -8,7 +8,7 @@ function App() {
   return (
     <GlobalContext.Provider value={projectDetail}>
       <div
-        ref={projectDetail.parentRef}
+        ref={projectDetail.pdfOptions.parentRef}
         className="xs:p-0 sm:p-2 md:p-4 w-full"
       >
         <div
