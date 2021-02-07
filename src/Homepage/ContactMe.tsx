@@ -14,9 +14,9 @@ export default function ContactMe() {
       </h2>
       <div className={'grid gap-2 grid-cols-1'}>
         <div className="col-span-1 flex items-center">
-          <FaGithub className="w-8 h-8 mr-3 " />
+          <FaGithub className="w-8 h-8 dark:text-white mr-3 " />
           <a
-            className="text-sm text-white md:text-green-900 font-medium"
+            className="text-sm text-green-800 dark:text-green-300 font-medium"
             rel="noreferrer"
             target="_blank"
             href={state.contactDetails.github.url}
@@ -28,7 +28,7 @@ export default function ContactMe() {
         <div className="col-span-1 flex items-center">
           <FaLinkedin className="w-7 h-7 mr-3 text-purple-600" />
           <a
-            className="text-sm text-white md:text-green-900 font-medium"
+            className="text-sm text-green-800 dark:text-green-300 font-medium"
             href={state.contactDetails.linkedIn.url}
             rel="noreferrer"
             target="_blank"
@@ -46,7 +46,7 @@ export default function ContactMe() {
             alt="mail_icon"
           />
           <a
-            className="text-sm text-white md:text-green-900 font-medium"
+            className="text-sm text-green-800 dark:text-green-300 font-medium"
             rel="noreferrer"
             target="_blank"
             href={state.contactDetails.mail.url}
@@ -56,9 +56,9 @@ export default function ContactMe() {
         </div>
 
         <div className="col-span-1 flex items-center">
-          <IoIosCall className="w-8 text-white md:text-green-900 h-8 mr-3 " />
+          <IoIosCall className="w-8 text-green-800 dark:text-green-300 h-8 mr-3 " />
           <a
-            className="text-sm text-white md:text-green-900 font-medium"
+            className="text-sm text-green-800 dark:text-green-300 font-medium"
             href={state.contactDetails.mobile.url}
           >
             {state.contactDetails.mobile.display}

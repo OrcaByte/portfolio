@@ -8,7 +8,7 @@ export default function SideBarInfo() {
   return (
     <aside
       className={
-        'md:col-span-3 col-span-12 p-4 shadow-md rounded-sm bg-yellow-300 flex h-full flex-col justify-between items-center'
+        'md:col-span-3 col-span-12 p-4 shadow-md rounded-sm dark:bg-black bg-yellow-300 flex h-full flex-col justify-between items-center'
       }
     >
       <div className="avatar-container relative">
@@ -21,12 +21,12 @@ export default function SideBarInfo() {
 
       <div className="mt-1">
         <h2 className="font-medium text-purple-500 text-3xl">{state.profile.name}</h2>
-        <p className="text-base italic underline text-center text-green-600">
+        <p className="text-base italic underline text-center dark:text-gray-200 text-green-600">
           {state.profile.jobTitle}
         </p>
       </div>
 
-      <p className="text-center tracking-tight font-medium mt-4">
+      <p className="text-center dark:text-gray-200 tracking-tight font-medium mt-4">
         {state.profile.aboutMe}
       </p>
       <div className="hidden md:block w-full">
