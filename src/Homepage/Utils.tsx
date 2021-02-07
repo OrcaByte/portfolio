@@ -12,7 +12,11 @@ const eventName = Symbol('Global');
 const dispatcher = (value: IObject) => {
   observable.emit(eventName, value);
 };
-
+/**
+ * TODO:
+ * 1. multiple global state
+ *
+ */
 export const useStateListner = (): [typeof globalState, Function] => {
   const [state, setLocalState] = useState(globalState);
   const listner = (e: IObject) => {
