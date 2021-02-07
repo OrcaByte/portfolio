@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItem from '@material-ui/core/ListItem';
@@ -13,6 +12,11 @@ import Typography from '@material-ui/core/Typography';
 import Slide from '@material-ui/core/Slide';
 import { TransitionProps } from '@material-ui/core/transitions';
 import { IoMdClose } from 'react-icons/io';
+import { useStateListner } from '../Homepage/Utils';
+import { GlobalContext } from '../globalContext';
+// @ts-ignore
+import ReactToPdf from 'react-to-pdf';
+import { FaFileDownload } from 'react-icons/fa';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -33,27 +37,17 @@ const Transition = React.forwardRef(function Transition(
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function Sample1() {
+export default function ResumeDialog() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const { pdfOptions, profile } = useContext(GlobalContext);
+  const [state, dispatcher] = useStateListner();
 
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open full-screen dialog
-      </Button>
       <Dialog
         fullScreen
-        open={open}
-        onClose={handleClose}
+        open={state.isResumeDialog}
+        onClose={() => dispatcher({ isResumeDialog: false })}
         TransitionComponent={Transition}
       >
         <AppBar className={classes.appBar}>
@@ -61,7 +55,7 @@ export default function Sample1() {
             <IconButton
               edge="start"
               color="inherit"
-              onClick={handleClose}
+              onClick={() => dispatcher({ isResumeDialog: false })}
               aria-label="close"
             >
               <IoMdClose />
@@ -69,12 +63,23 @@ export default function Sample1() {
             <Typography variant="h6" className={classes.title}>
               Sound
             </Typography>
-            <Button autoFocus color="inherit" onClick={handleClose}>
-              save
-            </Button>
+            <ReactToPdf
+              targetRef={pdfOptions.parentRef}
+              filename={`${profile.name}.pdf`}
+              options={pdfOptions.options}
+            >
+              {({ toPdf }: any) => (
+                <button
+                  className="bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-blue-400 py-2 px-4 border border-blue hover:border-transparent rounded text-yellow-400"
+                  onClick={toPdf}
+                >
+                  <FaFileDownload />
+                </button>
+              )}
+            </ReactToPdf>
           </Toolbar>
         </AppBar>
-        <List>
+        <List ref={pdfOptions.parentRef}>
           <ListItem button>
             <ListItemText primary="Phone ringtone" secondary="Titania" />
           </ListItem>

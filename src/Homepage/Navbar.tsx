@@ -2,12 +2,14 @@ import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { GlobalContext } from '../globalContext';
 import { FaRegFilePdf } from 'react-icons/fa';
-// @ts-ignore
-import ReactToPdf from 'react-to-pdf';
+
+import { useStateListner } from './Utils';
+import { IconButton } from '@material-ui/core';
 
 export default function NavbarCss() {
   const location = useLocation();
-  const { pdfOptions, profile, TABS } = useContext(GlobalContext);
+  const { TABS } = useContext(GlobalContext);
+  const [state, dispatcher] = useStateListner();
 
   return (
     <nav className="bg-gray-800 mt-4 md:mt-0 md:ml-3">
@@ -34,20 +36,13 @@ export default function NavbarCss() {
             </div>
           </div>
           <div className="absolute hidden inset-y-0 right-0 md:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <ReactToPdf
-              targetRef={pdfOptions.parentRef}
-              filename={`${profile.name}.pdf`}
-              options={pdfOptions.options}
+            <IconButton
+              size="small"
+              className="bg-transparent hover:bg-blue text-blue-dark font-semibold py-2 px-4 border border-blue hover:border-transparent rounded"
+              onClick={() => dispatcher({ isResumeDialog: true })}
             >
-              {({ toPdf }: any) => (
-                <button
-                  className="bg-transparent hover:bg-blue text-blue-dark font-semibold hover:text-blue-400 py-2 px-4 border border-blue hover:border-transparent rounded text-yellow-400"
-                  onClick={toPdf}
-                >
-                  <FaRegFilePdf />
-                </button>
-              )}
-            </ReactToPdf>
+              <FaRegFilePdf className="text-yellow-400 hover:text-blue-400" />
+            </IconButton>
           </div>
         </div>
       </div>
