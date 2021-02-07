@@ -1,10 +1,19 @@
 import { useEffect, useState } from 'react';
 import { EventEmitter } from 'events';
 
+// ***********************Types Declaration*************************
+
 type IObject = { [key: string]: any };
+type IDisplayMode = 'display' | 'pdf' | 'ready-download';
+type IGlobalState = {
+  isResumeDialog: boolean;
+  displayMode: IDisplayMode;
+};
+// ************************************************
 const observable = new EventEmitter();
-let globalState = {
+let globalState: IGlobalState = {
   isResumeDialog: false,
+  displayMode: 'pdf',
 };
 
 const eventName = Symbol('Global');

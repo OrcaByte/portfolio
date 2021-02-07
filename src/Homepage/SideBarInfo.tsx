@@ -2,13 +2,12 @@ import React, { useContext } from 'react';
 import { GlobalContext } from '../globalContext';
 import ContactMe from './ContactMe';
 
-export default function SideBarInfo(props?: { classes?: { root?: string, contactGridCols:string } }) {
+export default function SideBarInfo() {
   const { profile } = useContext(GlobalContext);
 
   return (
     <aside
       className={
-        props?.classes?.root ||
         'md:col-span-3 col-span-12 p-4 shadow-md rounded-sm bg-yellow-300 flex h-full flex-col justify-between items-center'
       }
     >
@@ -31,7 +30,7 @@ export default function SideBarInfo(props?: { classes?: { root?: string, contact
         {profile.aboutMe}
       </p>
       <div className="hidden md:block w-full">
-        <ContactMe classes={{gridCols:props?.classes?.contactGridCols}} />
+        <ContactMe />
       </div>
     </aside>
   );

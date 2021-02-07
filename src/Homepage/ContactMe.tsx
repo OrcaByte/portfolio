@@ -4,7 +4,7 @@ import { IoIosCall } from 'react-icons/io';
 import { GlobalContext } from '../globalContext';
 import MailIcon from '../Images/mail.png';
 
-export default function ContactMe(props: { classes?: { gridCols?: string } }) {
+export default function ContactMe() {
   const { contactDetails } = useContext(GlobalContext);
 
   const IMAGE_SIZE = 30;
@@ -13,9 +13,7 @@ export default function ContactMe(props: { classes?: { gridCols?: string } }) {
       <h2 className="font-medium mb-2 text-xl text-center md:text-black md:text-left text-white">
         Contact Me :
       </h2>
-      <div
-        className={'grid gap-2 ' + (props?.classes?.gridCols ?? 'grid-cols-1')}
-      >
+      <div className={'grid gap-2 grid-cols-1'}>
         <div className="col-span-1 flex items-center">
           <FaGithub className="w-8 h-8 mr-3 " />
           <a

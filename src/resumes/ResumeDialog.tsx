@@ -79,7 +79,7 @@ export default function ResumeDialog() {
         </Toolbar>
       </AppBar>
       <div ref={pdfOptions.parentRef}>
-        <SideBarInfo classes={{ contactGridCols: 'grid-cols-4' }} />
+        <SideBarInfo />
         <SkillsLanguages />
         <ProjectsPage />
         <WorkExperience />
