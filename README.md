@@ -5,7 +5,8 @@ This project was bootstrapped is hosted here [Portofio](https://dhruvanwd.github
 ## Features Added
 
 - ⚡ Single file Edit.
-- ⚡ Resposive.
+- ⚡ Responsiveness.
+- ⚡ Global State.
 
 ## TODO:
 
