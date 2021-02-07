@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoIosCall } from 'react-icons/io';
 import MailIcon from '../Images/mail.png';

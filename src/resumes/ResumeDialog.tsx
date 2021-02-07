@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
 import AppBar from '@material-ui/core/AppBar';
@@ -16,6 +16,7 @@ import SideBarInfo from '../Homepage/SideBarInfo';
 import SkillsLanguages from '../Homepage/SkillsLanguages';
 import ProjectsPage from '../Homepage/ProjectsPage';
 import WorkExperience from '../Homepage/WorkExperience';
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
