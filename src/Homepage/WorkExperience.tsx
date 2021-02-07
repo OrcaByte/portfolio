@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import { GlobalContext } from '../globalContext';
 import './stepper.scss';
+import { useStateListner } from './Utils';
 
 export default function WorkExperience() {
-  const { timeline } = useContext(GlobalContext);
+  const [state] = useStateListner();
 
   return (
     <div className="home-card scrollbar stepper-container ">
       <div className="timeline relative p-4">
-        {timeline.map((event, index: number) => (
+        {state.timeline.map((event, index: number) => (
           <React.Fragment key={index}>
             {event.year && (
               <h2 className="timeline__item timeline__item--year py-2 bg-gray-800 text-3xl grid place-items-center">

@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
 import { EventEmitter } from 'events';
+import { projectDetail } from '../globalContext';
 
 // ***********************Types Declaration*************************
 
 type IObject = { [key: string]: any };
 type IDisplayMode = 'display' | 'pdf' | 'ready-download';
-type IGlobalState = {
+
+type IprojectDetail = typeof projectDetail;
+interface IGlobalState extends IprojectDetail  {
   isResumeDialog: boolean;
   displayMode: IDisplayMode;
 };
@@ -14,6 +17,7 @@ const observable = new EventEmitter();
 let globalState: IGlobalState = {
   isResumeDialog: false,
   displayMode: 'pdf',
+  ...projectDetail
 };
 
 const eventName = Symbol('Global');

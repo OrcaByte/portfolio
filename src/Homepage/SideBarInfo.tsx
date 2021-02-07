@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { GlobalContext } from '../globalContext';
 import ContactMe from './ContactMe';
+import { useStateListner } from './Utils';
 
 export default function SideBarInfo() {
-  const { profile } = useContext(GlobalContext);
+  const [state] = useStateListner();
 
   return (
     <aside
@@ -14,20 +14,20 @@ export default function SideBarInfo() {
       <div className="avatar-container relative">
         <img
           className="transform hover:scale-110"
-          src={profile.avatarUrl}
+          src={state.profile.avatarUrl}
           alt="avatar"
         />
       </div>
 
       <div className="mt-1">
-        <h2 className="font-medium text-purple-500 text-3xl">{profile.name}</h2>
+        <h2 className="font-medium text-purple-500 text-3xl">{state.profile.name}</h2>
         <p className="text-base italic underline text-center text-green-600">
-          {profile.jobTitle}
+          {state.profile.jobTitle}
         </p>
       </div>
 
       <p className="text-center tracking-tight font-medium mt-4">
-        {profile.aboutMe}
+        {state.profile.aboutMe}
       </p>
       <div className="hidden md:block w-full">
         <ContactMe />

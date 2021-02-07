@@ -254,4 +254,3 @@ export const projectDetail = {
     },
   },
 };
-export const GlobalContext = React.createContext(projectDetail);

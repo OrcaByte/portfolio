@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import SkillCard from './SkillCard';
-import { GlobalContext } from '../globalContext';
+import { useStateListner } from './Utils';
 
 export default function SkillsLanguages() {
-  const { skills } = useContext(GlobalContext);
+  const [state] = useStateListner();
 
   return (
     <div className="home-card scrollbar">
-      {skills.map((detail) => (
+      {state.skills.map((detail) => (
         <React.Fragment key={detail.label}>
           <h3 className="text-3xl mb-4 text-center font-semibold text-white">
             {detail.label}

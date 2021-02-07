@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IoIosCall } from 'react-icons/io';
-import { GlobalContext } from '../globalContext';
 import MailIcon from '../Images/mail.png';
+import { useStateListner } from './Utils';
 
 export default function ContactMe() {
-  const { contactDetails } = useContext(GlobalContext);
+  const [state] = useStateListner();
 
   const IMAGE_SIZE = 30;
   return (
@@ -20,9 +20,9 @@ export default function ContactMe() {
             className="text-sm text-white md:text-green-900 font-medium"
             rel="noreferrer"
             target="_blank"
-            href={contactDetails.github.url}
+            href={state.contactDetails.github.url}
           >
-            {contactDetails.github.display}
+            {state.contactDetails.github.display}
           </a>
         </div>
 
@@ -30,11 +30,11 @@ export default function ContactMe() {
           <FaLinkedin className="w-7 h-7 mr-3 text-purple-600" />
           <a
             className="text-sm text-white md:text-green-900 font-medium"
-            href={contactDetails.linkedIn.url}
+            href={state.contactDetails.linkedIn.url}
             rel="noreferrer"
             target="_blank"
           >
-            {contactDetails.linkedIn.display}
+            {state.contactDetails.linkedIn.display}
           </a>
         </div>
 
@@ -50,9 +50,9 @@ export default function ContactMe() {
             className="text-sm text-white md:text-green-900 font-medium"
             rel="noreferrer"
             target="_blank"
-            href={contactDetails.mail.url}
+            href={state.contactDetails.mail.url}
           >
-            {contactDetails.mail.display}
+            {state.contactDetails.mail.display}
           </a>
         </div>
 
@@ -60,9 +60,9 @@ export default function ContactMe() {
           <IoIosCall className="w-8 text-white md:text-green-900 h-8 mr-3 " />
           <a
             className="text-sm text-white md:text-green-900 font-medium"
-            href={contactDetails.mobile.url}
+            href={state.contactDetails.mobile.url}
           >
-            {contactDetails.mobile.display}
+            {state.contactDetails.mobile.display}
           </a>
         </div>
       </div>

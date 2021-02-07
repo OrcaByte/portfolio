@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { GlobalContext } from '../globalContext';
 import { FaRegFilePdf } from 'react-icons/fa';
-
 import { useStateListner } from './Utils';
 import { IconButton } from '@material-ui/core';
 
+
+
+
 export default function NavbarCss() {
   const location = useLocation();
-  const { TABS } = useContext(GlobalContext);
   const [state, dispatcher] = useStateListner();
 
   return (
@@ -17,7 +17,7 @@ export default function NavbarCss() {
         <div className="relative flex items-center justify-between h-14">
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex space-x-1 md:space-x-4">
-              {TABS.map((t) => (
+              {state.TABS.map((t) => (
                 <React.Fragment key={t.name}>
                   <Link
                     to={t.path}

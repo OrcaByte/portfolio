@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.scss';
-import { GlobalContext, projectDetail } from './globalContext';
 import HomeContainer from './Homepage/HomeContainer';
 import SideBarInfo from './Homepage/SideBarInfo';
 import ResumeDialog from './resumes/ResumeDialog';
 
 function App() {
   return (
-    <GlobalContext.Provider value={projectDetail}>
       <div className="xs:p-0 sm:p-2 md:p-4 w-full">
         <ResumeDialog />
         <div
@@ -18,7 +16,6 @@ function App() {
           <HomeContainer />
         </div>
       </div>
-    </GlobalContext.Provider>
   );
 }
 

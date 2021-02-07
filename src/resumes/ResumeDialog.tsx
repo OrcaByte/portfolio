@@ -9,7 +9,6 @@ import Slide from '@material-ui/core/Slide';
 import { TransitionProps } from '@material-ui/core/transitions';
 import { IoMdClose } from 'react-icons/io';
 import { useStateListner } from '../Homepage/Utils';
-import { GlobalContext } from '../globalContext';
 // @ts-ignore
 import ReactToPdf from 'react-to-pdf';
 import { FaFileDownload } from 'react-icons/fa';
@@ -39,7 +38,6 @@ const Transition = React.forwardRef(function Transition(
 
 export default function ResumeDialog() {
   const classes = useStyles();
-  const { pdfOptions, profile } = useContext(GlobalContext);
   const [state, dispatcher] = useStateListner();
 
   return (
@@ -63,9 +61,9 @@ export default function ResumeDialog() {
             PDF downloadable
           </Typography>
           <ReactToPdf
-            targetRef={pdfOptions.parentRef}
-            filename={`${profile.name}.pdf`}
-            options={pdfOptions.options}
+            targetRef={state.pdfOptions.parentRef}
+            filename={`${state.profile.name}.pdf`}
+            options={state.pdfOptions.options}
           >
             {({ toPdf }: any) => (
               <button
@@ -78,7 +76,7 @@ export default function ResumeDialog() {
           </ReactToPdf>
         </Toolbar>
       </AppBar>
-      <div ref={pdfOptions.parentRef}>
+      <div ref={state.pdfOptions.parentRef}>
         <SideBarInfo />
         <SkillsLanguages />
         <ProjectsPage />
