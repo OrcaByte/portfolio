@@ -60,7 +60,7 @@ export default function ResumeDialog() {
             <IoMdClose />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Sound
+            PDF downloadable
           </Typography>
           <ReactToPdf
             targetRef={pdfOptions.parentRef}
