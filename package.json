@@ -12,7 +12,7 @@
     "@types/react-router-dom": "^5.1.7",
     "autoprefixer": "9",
     "global": "^4.4.0",
-    "postcss": "7",
+    "postcss": "8",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",
